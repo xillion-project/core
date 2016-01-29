@@ -12,7 +12,6 @@ class Resource
     private $account;
     private $resourceType;
     private $resourceKey;
-    private $policies = array();
     
     public function __construct($xrn = null)
     {
@@ -121,19 +120,6 @@ class Resource
     {
         $this->resourceKey = $resourceKey;
         return $this;
-    }
-    
-    
-    public function addPolicy(Policy $policy)
-    {
-        $this->policies[] = $policy;
-        return $this;
-    }
-    
-    
-    public function getPolicies()
-    {
-        return $this->policies;
     }
     
     public function __toString()
